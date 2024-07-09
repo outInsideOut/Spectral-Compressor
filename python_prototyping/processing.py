@@ -27,9 +27,10 @@ def compress_spect_slice(threshold, ratio,
                          spect_slice_root: np.array):
     assert ratio <= 8 and ratio >= 1 and type(ratio) is int
     # find diff
-    sidechained_signal = v_apply_sidechain_compression(spect_slice_side,
-                                                       spect_slice_root,
-                                                       math.log(ratio), threshold)
+    sidechained_signal = v_apply_sidechain_compression(
+        spect_slice_side, spect_slice_root,
+        math.log(ratio), threshold
+    )
     return sidechained_signal
 
 
